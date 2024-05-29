@@ -94,12 +94,12 @@ be92bec7a507e83c33700633c0a59255,Pyramids are Strange,15
 947329e4045fb60fd62c6ee739583545,Bird Fez,36
 947329e4045fb60fd62c6ee739583545,Pi Henge,38
 "
-"
+" Etiquetado
 d2695d1ecd5266079525ebc7d197c5c2,45-Degree Rotations,13
 d2695d1ecd5266079525ebc7d197c5c2,Angled Silhouette,18
 d2695d1ecd5266079525ebc7d197c5c2,Bird Fez,11
 d2695d1ecd5266079525ebc7d197c5c2,Pi Henge,12
-d2695d1ecd5266079525ebc7d197c5c2,Pyramids are Strange,14
+d2695d1ecd5266079525ebc7d197c5c2,Pyramids are Strange,14 (ejemplo)
 "
 -----------------A partir de aquí están etiquetados---------------------------------------------
 "
@@ -131,35 +131,35 @@ a6f176cf29c7a3e3bf3fc3c2362ac8c8,Pi Henge,13
 a6f176cf29c7a3e3bf3fc3c2362ac8c8,Pyramids are Strange,15
 "
 -----------------------------------------------------------------------
-"
+" Etiquetado
 a8d110698c69055de0f594ab2956dde2,45-Degree Rotations,17
-a8d110698c69055de0f594ab2956dde2,Angled Silhouette,37
+a8d110698c69055de0f594ab2956dde2,Angled Silhouette,37 (incompleta)
 a8d110698c69055de0f594ab2956dde2,Bird Fez,15
 a8d110698c69055de0f594ab2956dde2,Pi Henge,16
 a8d110698c69055de0f594ab2956dde2,Pyramids are Strange,18
 a8d110698c69055de0f594ab2956dde2,Pyramids are Strange,22
 "
-"
+" Etiquetado
 953ea80f89aa793f2d8a17d212646301,45-Degree Rotations,13
 953ea80f89aa793f2d8a17d212646301,Angled Silhouette,20
 953ea80f89aa793f2d8a17d212646301,Bird Fez,11
 953ea80f89aa793f2d8a17d212646301,Pi Henge,12
-953ea80f89aa793f2d8a17d212646301,Pyramids are Strange,15
+953ea80f89aa793f2d8a17d212646301,Pyramids are Strange,15 (corrupted)
 "
-"
+" Etiquetado
 10b6d08eea990eacf342c323080e83f5,45-Degree Rotations,13
 10b6d08eea990eacf342c323080e83f5,Angled Silhouette,21
 10b6d08eea990eacf342c323080e83f5,Bird Fez,11
 10b6d08eea990eacf342c323080e83f5,Pi Henge,12
 10b6d08eea990eacf342c323080e83f5,Pyramids are Strange,14
 "
-"
-5b376caf2913ef3a48a53e38cba2a2f0,45-Degree Rotations,15
+" Etiquetado
+5b376caf2913ef3a48a53e38cba2a2f0,45-Degree Rotations,15 (corrupted)
 5b376caf2913ef3a48a53e38cba2a2f0,Angled Silhouette,21
 5b376caf2913ef3a48a53e38cba2a2f0,Pi Henge,14
 5b376caf2913ef3a48a53e38cba2a2f0,Pyramids are Strange,27
 "
-"
+" Etiquetado
 0d35fa2868a21199e36b159b49ae6aad,45-Degree Rotations,13
 0d35fa2868a21199e36b159b49ae6aad,Angled Silhouette,18
 0d35fa2868a21199e36b159b49ae6aad,Bird Fez,11
@@ -169,7 +169,7 @@ a8d110698c69055de0f594ab2956dde2,Pyramids are Strange,22
 "
 f22d5e004366e83c9eb106b13b21bc9d,45-Degree Rotations,13
 f22d5e004366e83c9eb106b13b21bc9d,Angled Silhouette,16
-f22d5e004366e83c9eb106b13b21bc9d,Bird Fez,11
+f22d5e004366e83c9eb106b13b21bc9d,Bird Fez,11 (scaleShapes no se corresponde)
 f22d5e004366e83c9eb106b13b21bc9d,Pi Henge,12
 f22d5e004366e83c9eb106b13b21bc9d,Pyramids are Strange,14
 "

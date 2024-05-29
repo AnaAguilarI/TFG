@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 import ast
 
-fecha = '04-22'
+fecha = '05-13'
 file_path =  '../spatial_reasoning/'
 
 df = pd.read_csv(file_path + fecha +'-labels.csv')
