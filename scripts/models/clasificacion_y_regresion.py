@@ -304,6 +304,55 @@ def entrenar_evaluar_modelo_reg(param_grid, X_train, y_train, X_test, y_test):
     plt.ylabel('True label')
     plt.title(f'Confusion Matrix for {param_grid["regressor"][0].__class__.__name__}')
     plt.savefig(f'figuras/confusion_matrix_{param_grid["regressor"][0].__class__.__name__}.png')
+    
+    
+    
+    ######
+    
+    plt.figure()
+    
+    #pon limites de 0 a 4 en x y en y
+    plt.xlim(0, 5)
+    plt.ylim(0, 5)
+
+    q1 = np.sum((y_test <= 2.5) & (y_pred_regression <= 2.5))
+    q2 = np.sum((y_test <= 2.5) & (y_pred_regression > 2.5))
+    q3 = np.sum((y_test > 2.5) & (y_pred_regression <= 2.5))
+    q4 = np.sum((y_test > 2.5) & (y_pred_regression > 2.5))
+
+    # Normalizar los conteos para la intensidad del color
+    max_count = max(q1, q2, q3, q4)
+    q1_intensity = q1 / max_count
+    q2_intensity = q2 / max_count
+    q3_intensity = q3 / max_count
+    q4_intensity = q4 / max_count
+    
+    q1_percentage = q1 / (q1 + q2 + q3 + q4)
+    q2_percentage = q2 / (q1 + q2 + q3 + q4)
+    q3_percentage = q3 / (q1 + q2 + q3 + q4)
+    q4_percentage = q4 / (q1 + q2 + q3 + q4)
+
+    # Colorear los cuadrantes
+    plt.fill_between([0, 2.5], 0, 2.5, color='blue', alpha=q1_intensity, label=f'True Neg (n={q1})')
+    plt.fill_between([2.5, 5], 0, 2.5, color='blue', alpha=q2_intensity, label=f'False Pos (n={q2})')
+    plt.fill_between([0, 2.5], 2.5, 5, color='blue', alpha=q3_intensity, label=f'False Neg (n={q3})')
+    plt.fill_between([2.5, 5], 2.5, 5, color='blue', alpha=q4_intensity, label=f'True Pos (n={q4})')
+    
+    plt.text(0.5, 0.5, f'True Neg\n{q1}\n{q1_percentage:.2%}', ha='center', va='center', fontsize=12, bbox=dict(facecolor='white', alpha=0.5))
+    plt.text(4.5, 0.5, f'False Pos\n{q2}\n{q2_percentage:.2%}', ha='center', va='center', fontsize=12, bbox=dict(facecolor='white', alpha=0.5))
+    plt.text(0.5, 4.5, f'False Neg\n{q3}\n{q3_percentage:.2%}', ha='center', va='center', fontsize=12, bbox=dict(facecolor='white', alpha=0.5))
+    plt.text(4.5, 4.5, f'True Pos\n{q4}\n{q4_percentage:.2%}', ha='center', va='center', fontsize=12, bbox=dict(facecolor='white', alpha=0.5))
+
+
+    plt.scatter(y_pred_regression,y_test, color = 'red') #grafica de dispersion
+
+    plt.xlabel('Predicted Value')
+    plt.ylabel('True Value')
+    
+    plt.savefig(f'figuras/scatter_plot_{param_grid["regressor"][0].__class__.__name__}.png')
+    
+    
+    
 
 # Entrenar y evaluar cada modelo de regresión
 for param_grid in param_grids_reg:
