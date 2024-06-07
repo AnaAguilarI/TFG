@@ -4,7 +4,6 @@ from scipy.stats import norm
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC, SVR
 from sklearn.linear_model import LinearRegression
 from sklearn.neighbors import KNeighborsClassifier, KNeighborsRegressor
@@ -52,7 +51,7 @@ def intervalo_confianza(media, std, n, alpha=0.95):
     margin_error = z * (std / np.sqrt(n))
     return (media - margin_error, media + margin_error)
 
-# Funciones de puntuación personalizadas
+# Métricas personalizadas
 def true_positive_rate(y_true, y_pred):
     cm = confusion_matrix(y_true, y_pred)
     return cm[1, 1] / (cm[1, 1] + cm[1, 0])
@@ -64,7 +63,7 @@ def true_negative_rate(y_true, y_pred):
 tpr_scorer = make_scorer(true_positive_rate)
 tnr_scorer = make_scorer(true_negative_rate)
 
-# Definir la grilla de parámetros para múltiples modelos de clasificación
+# Definir el grid de parámetros para múltiples modelos de clasificación
 param_grids_clas = [
     {
         'classifier': [DecisionTreeClassifier(random_state=42)],
@@ -89,7 +88,7 @@ param_grids_clas = [
     }
 ]
 
-# Definir la grilla de parámetros para múltiples modelos de regresión
+# Definir el grid de parámetros para múltiples modelos de regresión
 param_grids_reg = [
     {
         'regressor': [DecisionTreeRegressor(random_state=42)],
@@ -184,16 +183,24 @@ def entrenar_evaluar_modelo_clas(param_grid, X_train, y_train, X_test, y_test):
 
     print(f'Best parameters: {grid_search.best_params_}')
 
-    cf_matrix = confusion_matrix(y_test, y_pred)
+    # Matriz de confusión transpuesta para que coincida con el scatter plot
+    cf_matrix = confusion_matrix(y_test, y_pred, labels= [0,1])
+    
+    cf_matrix_trans = np.array([[0,0], [0,0]])
+    cf_matrix_trans[0,0] = cf_matrix[1,0]
+    cf_matrix_trans[0,1] = cf_matrix[1,1]
+    cf_matrix_trans[1,0] = cf_matrix[0,0]
+    cf_matrix_trans[1,1] = cf_matrix[0,1]
 
-    group_names = ["True Neg", "False Pos", "False Neg", "True Pos"]
-    group_counts = ['{0:0.0f}'.format(value) for value in cf_matrix.flatten()]
-    group_percentages = ['{0:.2%}'.format(value) for value in cf_matrix.flatten()/np.sum(cf_matrix)]
+    group_names = ["False Neg", "True Pos", "True Neg", "False Pos"]
+    group_counts = ['{0:0.0f}'.format(value) for value in cf_matrix_trans.flatten()]
+    group_percentages = ['{0:.2%}'.format(value) for value in cf_matrix_trans.flatten()/np.sum(cf_matrix_trans)]
     labels = [f'{v1}\n{v2}\n{v3}' for v1, v2, v3 in zip(group_names, group_counts, group_percentages)]
     labels = np.asarray(labels).reshape(2, 2)
 
     fig, ax = plt.subplots()
-    sns.heatmap(cf_matrix, annot=labels, fmt='', cmap='Blues', cbar=False, ax=ax)
+    sns.heatmap(cf_matrix_trans, annot=labels, fmt='', cmap='Blues', cbar=False, ax=ax, xticklabels= [0,1], yticklabels=[1,0])
+
 
     plt.xlabel('Predicted label')
     plt.ylabel('True label')
@@ -289,16 +296,23 @@ def entrenar_evaluar_modelo_reg(param_grid, X_train, y_train, X_test, y_test):
         print(f"{metric}: {value}")
     print()
 
-    cf_matrix = confusion_matrix(y_test_discrete, y_pred_discrete)
+    cf_matrix = confusion_matrix(y_test_discrete, y_pred_discrete, labels= [0,1])
+    
+    cf_matrix_trans = np.array([[0,0], [0,0]])
+    cf_matrix_trans[0,0] = cf_matrix[1,0]
+    cf_matrix_trans[0,1] = cf_matrix[1,1]
+    cf_matrix_trans[1,0] = cf_matrix[0,0]
+    cf_matrix_trans[1,1] = cf_matrix[0,1]
 
-    group_names = ["True Neg", "False Pos", "False Neg", "True Pos"]
-    group_counts = ['{0:0.0f}'.format(value) for value in cf_matrix.flatten()]
-    group_percentages = ['{0:.2%}'.format(value) for value in cf_matrix.flatten()/np.sum(cf_matrix)]
+    group_names = ["False Neg", "True Pos", "True Neg", "False Pos"]
+    group_counts = ['{0:0.0f}'.format(value) for value in cf_matrix_trans.flatten()]
+    group_percentages = ['{0:.2%}'.format(value) for value in cf_matrix_trans.flatten()/np.sum(cf_matrix_trans)]
     labels = [f'{v1}\n{v2}\n{v3}' for v1, v2, v3 in zip(group_names, group_counts, group_percentages)]
     labels = np.asarray(labels).reshape(2, 2)
 
     fig, ax = plt.subplots()
-    sns.heatmap(cf_matrix, annot=labels, fmt='', cmap='Blues', cbar=False, ax=ax)
+    sns.heatmap(cf_matrix_trans, annot=labels, fmt='', cmap='Blues', cbar=False, ax=ax, xticklabels=[0,1], yticklabels=[1,0])
+
 
     plt.xlabel('Predicted label')
     plt.ylabel('True label')

@@ -44,7 +44,7 @@ df_pivoted["spatial_reasoning"] = calculate_mean_without_zeros(df_pivoted,constr
 df_pivoted = df_pivoted.drop(columns=constructs.keys())
 #-----------------------------------------------------
 ### Procesamiento de los datos de las replays ###
-file_path = '../../data/report.csv' # Datos de las repays en crudo
+file_path = '../../data/shadowspect.csv' # Datos de las repays en crudo
 
 df = pd.read_csv(file_path)
 # Creamos una nueva columna por cada contextFeature

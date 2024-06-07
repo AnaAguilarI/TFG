@@ -1,5 +1,10 @@
 #!/usr/bin/env/python
 
+'''
+Recibe el excel de etiquetado en crudo y calcula la matriz de frecuencias observadas antes de llamar
+a la función que calcula la kappa de Cohen ponderada.
+'''
+
 import pandas as pd
 import numpy as np
 import weighted_cohens_kappa as wck
