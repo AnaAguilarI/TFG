@@ -4,13 +4,8 @@
 
 Contiene el report con los datos de las replays y los datasets generados para los modelos.
 
-## Reports
-
-Contiene los reports que hemos generado para saber qué replays hay que etiquetar y las estadísticas de cada puzle.
-
 ## Scripts
 
-tags.ipynb: notebook para comprobar que no me he dejado alguna replay sin etiquetar.
 
 ### data
 
@@ -24,12 +19,9 @@ Scripts para calcular la kappa de Cohen.
 
 ### models
 
-Hay un notebook por modelo y otro para procesar los datosy generar un dataset numérico. Simplemente uso one-hot para los puzles y elimina el usuario y el grupo.
+clasificacion_y_regresion.py: script con el pipeline elaborado para el entrenamiento y prueba de los modelos.
+decision_tree_regression.py: entrenamiento del árbol de decisión con los hiperparámetros encontradoas en el script anterior y predicción del caso de uso.
 
 ### spatial_reasoning
 
 Contiene los .csv de los datos etiquetados y un notebook para procesarlos y calcular el predictor.
-
-### TFG
-
-Entorno virtual de python para ejecutar los scripts.
