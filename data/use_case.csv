@@ -1,2 +1,4 @@
 ,ActiveTime,InactiveTime,CreateShape,RotateShape,MoveShape,ScaleShape,DeleteFigure,RotateView,cube,pyramid,ramp,cylinder,cone,sphere,snap_submit,puzzle_45-Degree Rotations,puzzle_Angled Silhouette,puzzle_Bird Fez,puzzle_Pi Henge,puzzle_Pyramids are Strange
-0,21.164209,0.0,4,4,0,0,0,0,2,2,0,0,0,0,0,0,1,0,0,0,0
+0,21.164209,0.0,4,4,0,0,0,0,2,2,0,0,0,0,0,0,1,0,0,0
+1,500.192406,104.8714,9,36,15,12,1,133,2,2,0,9,0,0,0,0,0,0,0,1
+

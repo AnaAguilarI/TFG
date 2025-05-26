@@ -1,0 +1,272 @@
+Evaluar modelo de clasificación: DecisionTreeClassifier
+Fitting 5 folds for each of 36 candidates, totalling 180 fits
+Métricas en cada pliegue para el mejor modelo (DecisionTreeClassifier):
+Pliegue 0 - accuracy: 0.96875 - balanced_accuracy: 0.9285714285714286 - tpr: 1.0 - tnr: 0.8571428571428571
+Pliegue 1 - accuracy: 0.90625 - balanced_accuracy: 0.8885714285714286 - tpr: 0.92 - tnr: 0.8571428571428571
+Pliegue 2 - accuracy: 0.9354838709677419 - balanced_accuracy: 0.8333333333333333 - tpr: 1.0 - tnr: 0.6666666666666666
+Pliegue 3 - accuracy: 0.9032258064516129 - balanced_accuracy: 0.8766666666666667 - tpr: 0.92 - tnr: 0.8333333333333334
+Pliegue 4 - accuracy: 0.9354838709677419 - balanced_accuracy: 0.8571428571428572 - tpr: 1.0 - tnr: 0.7142857142857143
+
+Medias de las métricas:
+accuracy: 0.9298387096774194
+balanced_accuracy: 0.876857142857143
+tpr: 0.968
+tnr: 0.7857142857142858
+
+Desviaciones estándar de las métricas:
+accuracy: 0.02384322985212946
+balanced_accuracy: 0.031920536256783594
+tpr: 0.03919183588453083
+tnr: 0.07968190728895957
+
+Intervalos de confianza (95%):
+accuracy: (0.9089395812718796, 0.9507378380829593)
+balanced_accuracy: (0.8488780733207801, 0.9048362123935059)
+tpr: (0.9336474724406305, 1.0023525275593694)
+tnr: (0.7158712978993793, 0.8555572735291923)
+
+Métricas en el conjunto de prueba:
+accuracy: 0.85
+balanced_accuracy: 0.71875
+tpr: 0.9375
+tnr: 0.5
+
+Best parameters: {'classifier': DecisionTreeClassifier(random_state=42), 'classifier__max_depth': None, 'classifier__min_samples_leaf': 1, 'classifier__min_samples_split': 2}
+--------------------------------------------------------------------------------
+Evaluar modelo de clasificación: GaussianNB
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+Métricas en cada pliegue para el mejor modelo (GaussianNB):
+Pliegue 0 - accuracy: 0.8125 - balanced_accuracy: 0.8285714285714285 - tpr: 0.8 - tnr: 0.8571428571428571
+Pliegue 1 - accuracy: 0.875 - balanced_accuracy: 0.8685714285714285 - tpr: 0.88 - tnr: 0.8571428571428571
+Pliegue 2 - accuracy: 0.9032258064516129 - balanced_accuracy: 0.8133333333333332 - tpr: 0.96 - tnr: 0.6666666666666666
+Pliegue 3 - accuracy: 0.8709677419354839 - balanced_accuracy: 0.7933333333333333 - tpr: 0.92 - tnr: 0.6666666666666666
+Pliegue 4 - accuracy: 0.8387096774193549 - balanced_accuracy: 0.8452380952380952 - tpr: 0.8333333333333334 - tnr: 0.8571428571428571
+
+Medias de las métricas:
+accuracy: 0.8600806451612903
+balanced_accuracy: 0.8298095238095238
+tpr: 0.8786666666666667
+tnr: 0.780952380952381
+
+Desviaciones estándar de las métricas:
+accuracy: 0.03137915557797373
+balanced_accuracy: 0.025861308092125345
+tpr: 0.05756542171979439
+tnr: 0.09331389496316869
+
+Intervalos de confianza (95%):
+accuracy: (0.832576107992937, 0.8875851823296437)
+balanced_accuracy: (0.8071415043379804, 0.8524775432810672)
+tpr: (0.8282092769714702, 0.9291240563618632)
+tnr: (0.6991606486681681, 0.8627441132365938)
+
+Métricas en el conjunto de prueba:
+accuracy: 0.9
+balanced_accuracy: 0.796875
+tpr: 0.96875
+tnr: 0.625
+
+Best parameters: {'classifier': GaussianNB()}
+--------------------------------------------------------------------------------
+Evaluar modelo de clasificación: KNeighborsClassifier
+Fitting 5 folds for each of 32 candidates, totalling 160 fits
+Métricas en cada pliegue para el mejor modelo (KNeighborsClassifier):
+Pliegue 0 - accuracy: 0.9375 - balanced_accuracy: 0.9085714285714286 - tpr: 0.96 - tnr: 0.8571428571428571
+Pliegue 1 - accuracy: 0.84375 - balanced_accuracy: 0.6428571428571428 - tpr: 1.0 - tnr: 0.2857142857142857
+Pliegue 2 - accuracy: 0.9354838709677419 - balanced_accuracy: 0.8333333333333333 - tpr: 1.0 - tnr: 0.6666666666666666
+Pliegue 3 - accuracy: 0.8387096774193549 - balanced_accuracy: 0.5833333333333334 - tpr: 1.0 - tnr: 0.16666666666666666
+Pliegue 4 - accuracy: 0.8709677419354839 - balanced_accuracy: 0.7142857142857143 - tpr: 1.0 - tnr: 0.42857142857142855
+
+Medias de las métricas:
+accuracy: 0.8852822580645162
+balanced_accuracy: 0.7364761904761905
+tpr: 0.992
+tnr: 0.4809523809523809
+
+Desviaciones estándar de las métricas:
+accuracy: 0.04323362952800066
+balanced_accuracy: 0.1197562149552505
+tpr: 0.016000000000000014
+tnr: 0.2512553515861508
+
+Intervalos de confianza (95%):
+accuracy: (0.8473870072722863, 0.9231775088567461)
+balanced_accuracy: (0.6315071686937791, 0.8414452122586019)
+tpr: (0.9779756393507747, 1.0060243606492254)
+tnr: (0.2607214018466258, 0.7011833600581361)
+
+Métricas en el conjunto de prueba:
+accuracy: 0.875
+balanced_accuracy: 0.6875
+tpr: 1.0
+tnr: 0.375
+
+Best parameters: {'classifier': KNeighborsClassifier(), 'classifier__algorithm': 'auto', 'classifier__n_neighbors': 5, 'classifier__weights': 'distance'}
+--------------------------------------------------------------------------------
+Evaluar modelo de clasificación: SVC
+Fitting 5 folds for each of 32 candidates, totalling 160 fits
+Métricas en cada pliegue para el mejor modelo (SVC):
+Pliegue 0 - accuracy: 0.90625 - balanced_accuracy: 0.8885714285714286 - tpr: 0.92 - tnr: 0.8571428571428571
+Pliegue 1 - accuracy: 0.96875 - balanced_accuracy: 0.9285714285714286 - tpr: 1.0 - tnr: 0.8571428571428571
+Pliegue 2 - accuracy: 0.9354838709677419 - balanced_accuracy: 0.8333333333333333 - tpr: 1.0 - tnr: 0.6666666666666666
+Pliegue 3 - accuracy: 0.8709677419354839 - balanced_accuracy: 0.73 - tpr: 0.96 - tnr: 0.5        
+Pliegue 4 - accuracy: 0.9032258064516129 - balanced_accuracy: 0.8363095238095238 - tpr: 0.9583333333333334 - tnr: 0.7142857142857143
+
+Medias de las métricas:
+accuracy: 0.9169354838709678
+balanced_accuracy: 0.8433571428571429
+tpr: 0.9676666666666666
+tnr: 0.719047619047619
+
+Desviaciones estándar de las métricas:
+accuracy: 0.03299683277141685
+balanced_accuracy: 0.06679190617252014
+tpr: 0.030029615012147206
+tnr: 0.13333333333333333
+
+Intervalos de confianza (95%):
+accuracy: (0.8880130161791849, 0.9458579515627507)
+balanced_accuracy: (0.7848125315688529, 0.9019017541454329)
+tpr: (0.9413450322236826, 0.9939883011096505)
+tnr: (0.6021779469707416, 0.8359172911244965)
+
+Métricas en el conjunto de prueba:
+accuracy: 0.9
+balanced_accuracy: 0.75
+tpr: 1.0
+tnr: 0.5
+
+Best parameters: {'classifier': SVC(random_state=42), 'classifier__C': 0.1, 'classifier__gamma': 1, 'classifier__kernel': 'linear'}
+--------------------------------------------------------------------------------
+Evaluar modelo de regresión: DecisionTreeRegressor
+Fitting 5 folds for each of 36 candidates, totalling 180 fits
+Métricas en cada pliegue para el mejor modelo (DecisionTreeRegressor):
+Pliegue 0 - mse: -0.10663651403620751 - r2: 0.8160175998721942
+Pliegue 1 - mse: -0.11232528217922572 - r2: 0.7453571844422375
+Pliegue 2 - mse: -0.11049906287476828 - r2: 0.7386129473447904
+Pliegue 3 - mse: -0.18167449408120134 - r2: 0.34684876877819915
+Pliegue 4 - mse: -0.10694431318383923 - r2: 0.789025482698509
+
+Medias de las métricas:
+mse: -0.12361593327104843
+r2: 0.6871723966271862
+
+Desviaciones estándar de las métricas:
+mse: 0.0291086625192606
+r2: 0.17252646695797635
+
+Intervalos de confianza (95%):
+mse: (-0.14913033209521703, -0.09810153444687982)
+r2: (0.5359490594924792, 0.8383957337618932)
+
+Métricas en el conjunto de prueba:
+mse: 0.14199708433720717
+r2: 0.6055335344460395
+
+Best parameters: {'regressor': DecisionTreeRegressor(random_state=42), 'regressor__max_depth': None, 'regressor__min_samples_leaf': 4, 'regressor__min_samples_split': 10}
+Métricas de clasificación en el conjunto de prueba:
+accuracy: 0.9
+balanced_accuracy: 0.9375
+tpr: 0.875
+tnr: 1.0
+
+--------------------------------------------------------------------------------
+Evaluar modelo de regresión: LinearRegression
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+Métricas en cada pliegue para el mejor modelo (LinearRegression):
+Pliegue 0 - mse: -0.30949957297759395 - r2: 0.4660133558415611
+Pliegue 1 - mse: -0.35168439792560696 - r2: 0.2027270838935329
+Pliegue 2 - mse: -0.19277396067079203 - r2: 0.5439905452816695
+Pliegue 3 - mse: -0.3230654521263302 - r2: -0.1614761823815889
+Pliegue 4 - mse: -0.6609980758448906 - r2: -0.3039847172506178
+
+Medias de las métricas:
+mse: -0.36760429190904276
+r2: 0.14945401707691133
+
+Desviaciones estándar de las métricas:
+mse: 0.15637062819392142
+r2: 0.3349600517730073
+
+Intervalos de confianza (95%):
+mse: (-0.5046666722051348, -0.2305419116129507)
+r2: (-0.1441460184948283, 0.44305405264865094)
+
+Métricas en el conjunto de prueba:
+mse: 0.1601523677252108
+r2: 0.5550983406346707
+
+Best parameters: {'regressor': LinearRegression()}
+Métricas de clasificación en el conjunto de prueba:
+accuracy: 0.875
+balanced_accuracy: 0.6875
+tpr: 1.0
+tnr: 0.375
+
+--------------------------------------------------------------------------------
+Evaluar modelo de regresión: SVR
+Fitting 5 folds for each of 32 candidates, totalling 160 fits
+Métricas en cada pliegue para el mejor modelo (SVR):
+Pliegue 0 - mse: -0.2387748909274702 - r2: 0.5880362564348753
+Pliegue 1 - mse: -0.07407566692822135 - r2: 0.8320695392438555
+Pliegue 2 - mse: -0.07835889328510026 - r2: 0.8146409604547572
+Pliegue 3 - mse: -0.06727006353138588 - r2: 0.7581524856193896
+Pliegue 4 - mse: -0.1911155476799512 - r2: 0.6229765826699349
+
+Medias de las métricas:
+mse: -0.12991901247042578
+r2: 0.7231751648845626
+
+Desviaciones estándar de las métricas:
+mse: 0.07112866388626031
+r2: 0.09974935583448334
+
+Intervalos de confianza (95%):
+mse: (-0.19226488964782842, -0.06757313529302314)
+r2: (0.6357426060876438, 0.8106077236814814)
+
+Métricas en el conjunto de prueba:
+mse: 0.048242520702611716
+r2: 0.8659827649293035
+
+Best parameters: {'regressor': SVR(), 'regressor__C': 10, 'regressor__gamma': 0.1, 'regressor__kernel': 'rbf'}
+Métricas de clasificación en el conjunto de prueba:
+accuracy: 0.9
+balanced_accuracy: 0.796875
+tpr: 0.96875
+tnr: 0.625
+
+--------------------------------------------------------------------------------
+Evaluar modelo de regresión: KNeighborsRegressor
+Fitting 5 folds for each of 32 candidates, totalling 160 fits
+Métricas en cada pliegue para el mejor modelo (KNeighborsRegressor):
+Pliegue 0 - mse: -0.13698925321969194 - r2: 0.7636493294359097
+Pliegue 1 - mse: -0.1579088170069704 - r2: 0.6420187424956478
+Pliegue 2 - mse: -0.1900334566116488 - r2: 0.5504732453170619
+Pliegue 3 - mse: -0.15437717705235238 - r2: 0.44498734522842753
+Pliegue 4 - mse: -0.1349102161245708 - r2: 0.7338557153853202
+
+Medias de las métricas:
+mse: -0.15484378400304685
+r2: 0.6269968755724735
+
+Desviaciones estándar de las métricas:
+mse: 0.019819468234651243
+r2: 0.11772994215783077
+
+Intervalos de confianza (95%):
+mse: (-0.17221599465296022, -0.13747157335313348)
+r2: (0.5238039275703577, 0.7301898235745894)
+
+Métricas en el conjunto de prueba:
+mse: 0.13885126491315627
+r2: 0.6142725890207763
+
+Best parameters: {'regressor': KNeighborsRegressor(), 'regressor__algorithm': 'auto', 'regressor__n_neighbors': 3, 'regressor__weights': 'distance'}
+Métricas de clasificación en el conjunto de prueba:
+accuracy: 0.875
+balanced_accuracy: 0.6875
+tpr: 1.0
+tnr: 0.375
+
+--------------------------------------------------------------------------------
